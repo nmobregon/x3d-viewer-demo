@@ -9,6 +9,11 @@
 		"zmin": -30, 
 		"zmax": 90
 	},
+	"cog": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
     "showXYZ": true,
     "errors": [
 		{ "id": "err1", "name": "ERR", "desc":"Shape doesn't comply with specs", "color": [0.737374, 0.1111, 0.243245676543], "visible": true, "ids": ["holes"] },

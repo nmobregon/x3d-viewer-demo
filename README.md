@@ -150,6 +150,11 @@ const clickHandler = useCallback(
 		"zmin": number,
 		"zmax": number
 	},
+	"cog": {
+        "x": number,
+        "y": number,
+        "z": number
+    },
 	"errors": [
 		{ 
 			"id": string, 

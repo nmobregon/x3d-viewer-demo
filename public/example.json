@@ -1,0 +1,39 @@
+{
+    "id": "35234523452",
+	"url": "united.x3d",
+	"boundingBox": {
+		"xmin": -45, 
+		"xmax": 35, 
+		"ymin": -70, 
+		"ymax": 70, 
+		"zmin": -30, 
+		"zmax": 90
+	},
+    "showXYZ": true,
+    "errors": [
+		{ "id": "err1", "name": "ERR", "desc":"Shape doesn't comply with specs", "color": [0.737374, 0.1111, 0.243245676543], "visible": true, "ids": ["holes"] },
+		{ "id": "err2", "name": "WAR", "desc":"Should be more reounded", "color": [0.137374, 0.8111, 0.443245676543], "visible": true, "ids": ["default"] }
+	],
+	"viewpoints": [
+		{
+			"id": "default",
+			"name": "Best defect view",
+			"position": "-100.94639 100.79771 -112.89271" ,
+			"orientation": "0.03886 0.99185 0.12133 3.75685" ,
+			"zNear": "1.68178" ,
+			"zFar": "6.53435"
+		},
+		{
+			"id": "front",
+			"name": "Front View",
+			"position": "-0.07427 0.95329 -2.79608" ,
+			"orientation": "-0.01451 0.99989 0.00319 3.15833" 
+		},
+		{
+			"id": "top",
+			"name": "Top View",
+			"position": "-2.43383 1.07351 -1.28700" ,
+			"orientation": "-0.00318 -0.99950 -0.03159 2.06609" 
+		}
+	]
+}

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN" "http://www.web3d.org/specifications/x3d-3.3.dtd">
+<X3D xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" profile="Interchange" version="3.3">
+   <head>
+      <meta name="creator" content="gmsh" />
+   </head>
+   <Scene>
+      <Group DEF="faces">
+         <Shape DEF="face1">
+            <Appearance>
+               <Material DEF="matface1" />
+            </Appearance>
+            <IndexedTriangleSet DEF="setface1" index=" 1 2 0 1 3 2  ">
+               <Coordinate point=" 0 0 0 0 0 1 0 1 0 0 1 1 " />
+               <Normal vector=" -1 0 0 -1 0 0 -1 0 0 -1 0 0 " />
+            </IndexedTriangleSet>
+         </Shape>
+         <Shape DEF="face2">
+            <Appearance>
+               <Material DEF="matface2" />
+            </Appearance>
+            <IndexedTriangleSet DEF="setface2" index=" 1 0 2 1 2 3  ">
+               <Coordinate point=" 1 0 0 1 0 1 1 1 0 1 1 1 " />
+               <Normal vector=" 1 -0 -0 1 -0 -0 1 -0 -0 1 -0 -0 " />
+            </IndexedTriangleSet>
+         </Shape>
+         <Shape DEF="face3">
+            <Appearance>
+               <Material DEF="matface3" />
+            </Appearance>
+            <IndexedTriangleSet DEF="setface3" index=" 3 0 1 3 2 0  ">
+               <Coordinate point=" 0 0 0 1 0 0 0 0 1 1 0 1 " />
+               <Normal vector=" 0 -1 -0 0 -1 -0 0 -1 -0 0 -1 -0 " />
+            </IndexedTriangleSet>
+         </Shape>
+         <Shape DEF="face4">
+            <Appearance>
+               <Material DEF="matface4" />
+            </Appearance>
+            <IndexedTriangleSet DEF="setface4" index=" 3 1 0 3 0 2  ">
+               <Coordinate point=" 0 1 0 1 1 0 0 1 1 1 1 1 " />
+               <Normal vector=" -0 1 0 -0 1 0 -0 1 0 -0 1 0 " />
+            </IndexedTriangleSet>
+         </Shape>
+         <Shape DEF="face5">
+            <Appearance>
+               <Material DEF="matface5" />
+            </Appearance>
+            <IndexedTriangleSet DEF="setface5" index=" 3 0 1 3 2 0  ">
+               <Coordinate point=" 0 0 0 0 1 0 1 0 0 1 1 0 " />
+               <Normal vector=" -0 0 -1 -0 0 -1 -0 0 -1 -0 0 -1 " />
+            </IndexedTriangleSet>
+         </Shape>
+         <Shape DEF="face6">
+            <Appearance>
+               <Material DEF="matface6" />
+            </Appearance>
+            <IndexedTriangleSet DEF="setface6" index=" 3 1 0 3 0 2  ">
+               <Coordinate point=" 0 0 1 0 1 1 1 0 1 1 1 1 " />
+               <Normal vector=" 0 -0 1 0 -0 1 0 -0 1 0 -0 1 " />
+            </IndexedTriangleSet>
+         </Shape>
+      </Group>
+   </Scene>
+</X3D>

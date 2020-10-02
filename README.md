@@ -239,18 +239,6 @@ const clickHandler = useCallback(
 			"orientation": "0.03886 0.99185 0.12133 3.75685" ,
 			"zNear": "1.68178" ,
 			"zFar": "6.53435"
-		},
-		{
-			"id": "front",
-			"name": "Front View",
-			"position": "-1.94639 1.79771 -2.89271", 
-			"orientation": "0.03886 0.99185 0.12133 3.75685" 
-		},
-		{
-			"id": "top",
-			"name": "Top View",
-			"position": "-1.94639 1.79771 -2.89271", 
-			"orientation": "0.03886 0.99185 0.12133 3.75685" 
 		}
 	]
 }

@@ -10,8 +10,12 @@ function ViewerWrapper() {
 	
 	useEffect(()=>{
 		(async ()=>{
-			const jsonFile = await fetch("example.json");
-			const confObj = await jsonFile.json();
+			/* 
+				the configuration can be loaded consuming any json producing resource, 
+				like an rest api endpoint or a file, or even generated programatically
+			*/
+			const jsonConf = await fetch("example.json");
+			const confObj = await jsonConf.json();
 			setConf(confObj);
 		})();
 	}, []);

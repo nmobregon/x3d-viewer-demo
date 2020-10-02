@@ -1,4 +1,12 @@
-### X3D Viewer
+### X3D Viewer Example
+
+This is a standard ReactJS web application. In order to run it locally you should run these steps
+
+1.	`git clone git@bitbucket.org:elad3d/x3d-examples-and-uecases.git`
+2.	`cd x3d-examples-and-uecases`
+3.	`npm install`
+4.	`npm start`
+5. 	Open localhost:3000 in your WebGL-enabled browser
 
 ## Component interface
 - The X3D Viewer component will receive 4 props as input
@@ -129,7 +137,7 @@ const clickHandler = useCallback(
 - The configuration is also expected to have a `showAxis` flag in order to toggle the axis visibility
 - For the rendered object to be viewed in different positions, a list of viewpoints should be provided to the component, which will show a list of options for the user to choose
 
-#### JSON File Error lines
+#### JSON Conf Error lines
 - In each error/message line of the file, the visible attribute indicated whether the shape gets painted or not
 - Each line may point to one or more *Shapes*, referencing them with the correspondent DEF atribute within the ids value.
 - When a Shape is referenced by more than one visible error item, colors are calculared as average using each RGB value.
@@ -245,4 +253,34 @@ const clickHandler = useCallback(
 
 ```
 	
-	
+##### JSON Configuration Loading
+
+The JSON object that contains all the configuration indicated in this file can be loaded from different king of resources. 
+JSON Files, RestAPI endpoints, programaticaly or any other way, after retrieving the necessary info, the format must comply with these specifications.
+
+For example:
+
+```
+	// Loading from file
+	const jsonConf = await fetch("example.json");
+	const confObj = await jsonConf.json();
+```
+```
+	// Loading from rest api
+	const jsonConf = await fetch("https://3dcastor.com/x3d/models/1/conf");
+	const confObj = await jsonConf.json();
+```
+```
+	//Programatically creating the Configuration Object
+	const confObj = {};
+	confObj.id = "some id";
+	confObj.url = "https://3dcastor.com/x3d/models/1?app_token=APsda9s8usanA79sA";
+	confObj.cog = {
+        "x": 14,
+        "y": -43,
+        "z": 0
+    };
+	(...)
+```
+
+

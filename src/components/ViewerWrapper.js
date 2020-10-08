@@ -16,6 +16,7 @@ function ViewerWrapper() {
 			*/
 			const jsonConf = await fetch("example.json");
 			const confObj = await jsonConf.json();
+			confObj.url += `?${Date.now()}`;
 			setConf(confObj);
 		})();
 	}, []);
@@ -41,7 +42,7 @@ function ViewerWrapper() {
 				...config,
 				showXYZ: !config.showXYZ
 			}))
-		},[conf]
+		},[]
 	)
 	const toggleError = useCallback(
 		(errorId) => {

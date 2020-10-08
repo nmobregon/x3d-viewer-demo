@@ -13,6 +13,7 @@ function MyX3DViewer({conf, clickHandler, mouseoverHandler, mouseoutHandler}) {
 	const [error, setError] = useState("");
 
 	const gotoViewpoint = useCallback((vp) => {
+		refScene.current.querySelectorAll(`viewpoint`).forEach(vp=>vp.removeAttribute('set_bind'));
 		refScene.current.querySelector(`#${vp.id}`).setAttribute('set_bind','true');
 	},[]);
 
@@ -107,7 +108,7 @@ function MyX3DViewer({conf, clickHandler, mouseoverHandler, mouseoutHandler}) {
 						)})
 					}
 					<Axes bbox={conf.boundingBox} show={conf.showXYZ} />
-					<inline ref={refInline} nameSpaceName="Model" mapDEFToID="true" url={conf.url}   />
+					<inline ref={refInline} nameSpaceName="Model" mapDEFToID="true" url={`${conf.url}`}   />
 				</scene>
 			</x3d>
 		</div>

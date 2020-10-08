@@ -1,6 +1,6 @@
 {
     "id": "35234523452",
-	"url": "united.x3d",
+	"url": "3dcastor.x3d",
 	"boundingBox": {
 		"xmin": -45, 
 		"xmax": 35, 
@@ -16,17 +16,16 @@
     },
     "showXYZ": true,
     "errors": [
-		{ "id": "err1", "name": "ERR", "desc":"Shape doesn't comply with specs", "color": [0.737374, 0.1111, 0.243245676543], "visible": true, "ids": ["holes"] },
-		{ "id": "err2", "name": "WAR", "desc":"Should be more reounded", "color": [0.137374, 0.8111, 0.443245676543], "visible": true, "ids": ["default"] }
+		{ "id": "err1", "name": "ERR", "desc":"Shape doesn't comply with specs", "color": [0.737374, 0.1111, 0.243245676543], "visible": true, "ids": ["default"] },
+		{ "id": "err2", "name": "WAR", "desc":"Should be more reounded", "color": [0.137374, 0.8111, 0.443245676543], "visible": true, "ids": ["holes", "overhanging"] },
+		{ "id": "err1", "name": "WAR", "desc":"Warning", "color": [0.137374, 0.4111, 0.443245676543], "visible": true, "ids": ["thin_unprintable"] }
 	],
 	"viewpoints": [
 		{
 			"id": "default",
 			"name": "Best defect view",
-			"position": "-100.94639 100.79771 -112.89271" ,
-			"orientation": "0.03886 0.99185 0.12133 3.75685" ,
-			"zNear": "1.68178" ,
-			"zFar": "6.53435"
+			"position": "0 0 260" ,
+			"orientation": "0 -50 0 0"
 		}
 	]
 }

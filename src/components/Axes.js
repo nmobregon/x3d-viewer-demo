@@ -11,11 +11,15 @@ function Axes({bbox, show}) {
 		const extra = Math.max(bbox.xmax, bbox.ymax, bbox.zmax) * axisExtraLengthFactor;
 		setExtraLength(extra);
 
-	}, [bbox])
+	}, [bbox]);
+
+	useEffect(()=>{
+		document.querySelector("Group#axes").setAttribute("render", show);
+	}, [show])
 
 
 	return (
-		<group id="axes" render={show}>
+		<group id="axes">
 			<shape isPickable="false" DEF="axis_line_x">
 				<indexedLineSet index="0 1 -1">
 					<coordinate point={` ${bbox.xmin - extraLength } 0 0, ${bbox.xmax + extraLength} 0 0 `} color="1 0 0, 1 0 0" />

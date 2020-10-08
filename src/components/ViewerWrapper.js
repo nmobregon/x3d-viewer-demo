@@ -37,10 +37,9 @@ function ViewerWrapper() {
 	)
 	const toggleAxes = useCallback(
 		() => {
-			const showXYZ = !conf.showXYZ;
-			setConf(()=>({
-				...conf,
-				showXYZ
+			setConf((config)=>({
+				...config,
+				showXYZ: !config.showXYZ
 			}))
 		},[conf]
 	)
@@ -56,9 +55,10 @@ function ViewerWrapper() {
 	return (
 		<>
 			<header className="App-header">
-				<h2 onClick={toggleAxes}>X3D File Viewer</h2><br/>
+				<h2 >X3D File Viewer</h2>
 			</header>
 			<div className="content">
+				<button id="axestoggler" type="button" onClick={toggleAxes}>Toggle Axes</button>
 				{ conf?.url && (
 				<MyX3DViewer 
 					conf={conf} 

@@ -1,13 +1,16 @@
-import React, {  useRef,useEffect, memo, useCallback } from 'react';
-import { interval } from 'rxjs';
-import { takeWhile, tap } from 'rxjs/operators';
+import React, {  useRef,useEffect, memo, useCallback, useState } from 'react';
+import { interval, timer } from 'rxjs';
+import { takeUntil, takeWhile, tap } from 'rxjs/operators';
 import { arrayColorToRgb, calculateAverageColor } from '../helpers';
 import Axes from './Axes';
+import './MyX3DViewer.css';
 
 
 function MyX3DViewer({conf, clickHandler, mouseoverHandler, mouseoutHandler}) {
 	const refScene = useRef(null);
 	const refInline = useRef(null);
+
+	const [error, setError] = useState("");
 
 	const gotoViewpoint = useCallback((vp) => {
 		refScene.current.querySelector(`#${vp.id}`).setAttribute('set_bind','true');
@@ -15,11 +18,15 @@ function MyX3DViewer({conf, clickHandler, mouseoverHandler, mouseoutHandler}) {
 
     useEffect(() => {
 		interval(250)
+			.pipe(takeUntil(timer(5000)))
 			.pipe(
 				tap(()=>console.count("Waiting for model to load")), 
 				takeWhile(()=>!refInline.current.querySelectorAll("shape").length))
 			.subscribe({
 				complete: ()=>{
+					if (!refInline.current.querySelectorAll("shape").length){
+						setError(`Model could not be loaded, please check ${conf.url} format and try again.`);
+					}
 					const shapes = [];
 					//process each error line
 					(conf.errors || []).forEach((error)=> {
@@ -67,9 +74,10 @@ function MyX3DViewer({conf, clickHandler, mouseoverHandler, mouseoutHandler}) {
   return (
 	  <>
 		<div>
+			{ error && (<>{error}<br/></>) }
 			{
-				conf.viewpoints && conf.viewpoints.map(vp=>
-					<button onClick={()=>gotoViewpoint(vp)}>{ vp.name }</button>
+				!error && conf.viewpoints && conf.viewpoints.map(vp=>
+					<button className="viewport-button" onClick={()=>gotoViewpoint(vp)}>{ vp.name }</button>
 				)
 			}
 			<x3d >

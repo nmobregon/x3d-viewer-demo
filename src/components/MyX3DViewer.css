@@ -1,0 +1,14 @@
+.viewport-button {
+	background-color: #444;
+    border: none;
+    padding: 10px;
+    color: white;
+    font-weight: 400;
+    border-radius: 5px;
+	cursor: pointer;
+	margin: 5px;
+}
+
+.viewport-button:hover {
+	background-color: #333;
+}

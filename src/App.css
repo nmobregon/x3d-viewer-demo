@@ -35,6 +35,8 @@
 }
 
 footer {
+	max-width: 900px;
+	margin: 0 auto;
 	text-align: left;
 	padding: 0 5vw;
 }
@@ -68,6 +70,22 @@ li.CUS::before {
 
 .error-desc {
 	color: #333;
+}
+
+#axestoggler {
+	background-color: #000;
+    border: none;
+    padding: 15px;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+	cursor: pointer;
+	border-inline-start: 5px solid #000;
+	margin: 5px;
+}
+
+#axestoggler:hover {
+	background-color: #333;
 }
 
 @keyframes App-logo-spin {

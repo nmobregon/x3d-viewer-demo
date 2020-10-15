@@ -1,0 +1,52 @@
+{
+    "boundingBox": {
+        "xmax": 19.71497917175293,
+        "xmin": 10.477374076843262,
+        "ymax": -7.748879432678223,
+        "ymin": -12.748879432678223,
+        "zmax": 52.47846984863281,
+        "zmin": 44.47846984863281
+    },
+    "cog": {
+        "x": 15.09618054577758,
+        "y": -10.318064720704973,
+        "z": 48.4784776612303
+    },
+    "errors": [
+        {
+            "color": [
+                0.737374,
+                0.1111,
+                0.243245676543
+            ],
+            "desc": "Its a hole",
+            "id": "holes",
+            "name": "HOLES",
+            "visible": true
+        },
+        {
+            "color": [
+                0.737374,
+                0.1111,
+                0.243245676543
+            ],
+            "desc": "Its a thin wall",
+            "id": "wt",
+            "name": "WT",
+            "visible": true
+        },
+        {
+            "color": [
+                0.737374,
+                0.1111,
+                0.243245676543
+            ],
+            "desc": "Its an overhanging are",
+            "id": "overhanging",
+            "name": "OVERHANGING",
+            "visible": true
+        }
+    ],
+    "id": "0",
+    "showXYZ": true
+}

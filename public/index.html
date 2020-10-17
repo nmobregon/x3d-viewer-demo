@@ -30,7 +30,18 @@
 </head>
 
 <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+	<noscript>You need to enable JavaScript to run this app.</noscript>
+	<script>
+		//log to console (flag is automatically set if firebug is found)
+		x3dom.debug.isFirebugAvailable = true;
+		// overwrite log.info function to keep those in the x3dom log
+		// (just so i dont need to set the filter in the javascript console)
+		x3dom.debug.logInfo= function(msg) {
+			x3dom.debug.isFirebugAvailable = false;
+			x3dom.debug.doLog(msg, x3dom.debug.INFO);
+			x3dom.debug.isFirebugAvailable = true;
+		}
+	</script>
     <div id="root"></div>
     <!--
       This HTML file is a template.

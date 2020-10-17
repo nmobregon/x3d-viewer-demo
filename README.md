@@ -252,35 +252,5 @@ const clickHandler = useCallback(
 }
 
 ```
-	
-##### JSON Configuration Loading
-
-The JSON object that contains all the configuration indicated in this file can be loaded from different king of resources. 
-JSON Files, RestAPI endpoints, programaticaly or any other way, after retrieving the necessary info, the format must comply with these specifications.
-
-For example:
-
-```
-	// Loading from file
-	const jsonConf = await fetch("example.json");
-	const confObj = await jsonConf.json();
-```
-```
-	// Loading from rest api
-	const jsonConf = await fetch("https://3dcastor.com/x3d/models/1/conf");
-	const confObj = await jsonConf.json();
-```
-```
-	//Programatically creating the Configuration Object
-	const confObj = {};
-	confObj.id = "some id";
-	confObj.url = "https://3dcastor.com/x3d/models/1?app_token=APsda9s8usanA79sA";
-	confObj.cog = {
-        "x": 14,
-        "y": -43,
-        "z": 0
-    };
-	(...)
-```
 
 

@@ -96,7 +96,6 @@ function getViewData(id, name, position, orientation, cogX, cogY, cogZ){
 	const viewpoint = {
 		id, name, position, orientation, centerOfRotation: `${cogX} ${cogY} ${cogZ}`
 	};
-	console.log(viewpoint);
 	return viewpoint;
 }
 
@@ -165,7 +164,7 @@ export function updateShape(refInline, shape, clickHandler, mouseoverHandler, mo
 
 
 export function updateShapeMaterial(shapeRef, shape) {
-	const shapeMaterial = shapeRef.querySelector("appearance > material");
+	const shapeMaterial = shapeRef.querySelector("Appearance > Material");
 
 	shapeRef.setAttribute("data-originalColor", shapeRef.getAttribute("data-originalColor") || shapeMaterial.getAttribute('diffuseColor'));
 	shapeMaterial.setAttribute('diffuseColor', shape.color || shapeRef.getAttribute("data-originalColor"));

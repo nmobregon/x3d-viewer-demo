@@ -20,9 +20,9 @@ export const MyX3DViewer = memo(({conf, clickHandler, mouseoverHandler, mouseout
 		//however if after 5s it hasn't loaded, it shows an error
 		interval(250)
 			.pipe(takeUntil(timer(5000)))
-			.pipe(takeWhile(()=>!refInline.current.querySelectorAll("shape").length))
+			.pipe(takeWhile(()=>!refInline.current.querySelectorAll("Shape").length))
 			.subscribe({complete: ()=>{
-				if (!refInline.current.querySelectorAll("shape").length){
+				if (!refInline.current.querySelectorAll("Shape").length){
 					setError(`Model could not be loaded, please check ${conf.url} format and try again.`);
 				} else {
 					//transpose error list into shape list with errors

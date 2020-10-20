@@ -56,7 +56,7 @@ function ViewerWrapper() {
 		],
 		"id": "0",
 		"showXYZ": true,
-		url: `http://localhost:3000/4cfa25df-ccea-4a39-bd01-944823732e26.x3d?${Date.now()}`
+		url: `4cfa25df-ccea-4a39-bd01-944823732e26.x3d?${Date.now()}`
 
 	});
 	
